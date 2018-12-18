@@ -1,6 +1,7 @@
 #!/bin/bash
-# Aoo installation wrapper script by Apivat Pattana-Anurak
-# 
+# Aoo installation wrapper 
+# Script Developed by Apivat Pattana-Anurak
+# SysAdmin & Programmer
 
 # install
 yum install screen -y
