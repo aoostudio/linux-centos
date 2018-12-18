@@ -28,3 +28,5 @@ echo -e '\e[1;36mConfig + Securing SSHD.........................................
 echo 'AllowUsers aoo' >> /etc/ssh/sshd_config
 sed -i 's/#MaxAuthTries 6/MaxAuthTries 3/' /etc/ssh/sshd_config
 
+# Disable password authentication forcing use of keys
+PasswordAuthentication no
