@@ -5,6 +5,8 @@
 # RAM 4 GB / HDD 10GB Network 1 Gbps symmetric or more
 # This can be a VM (VMWare, Xen, KVM...)
 
+yum -y install perl 
+yum -y update
 yum -y install yum-utils wget &&\
 rpm --import https://repo.nperf.com/conf/nperf-server.gpg.key &&\
 wget https://repo.nperf.com/rhel/nperf-server.repo -O /tmp/nperf-server.repo &&\
