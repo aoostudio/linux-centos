@@ -13,5 +13,6 @@ rm mackerel-agent/mackerel-agent.conf
 y
 
 curl -o mackerel-agent/mackerel-agent.conf https://raw.githubusercontent.com/aoopa/linux-centos/master/mackerel-agent.conf
+## ดาวน์โหล์ไฟล์ mackerel-agent.conf มาไว้ที่ mackerel-agent/mackerel-agent.conf
 chmod 600 mackerel-agent/mackerel-agent.conf
 cd mackerel-agent && ./mackerel-agent --conf=./mackerel-agent.conf
