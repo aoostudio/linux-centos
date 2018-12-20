@@ -2,7 +2,7 @@
 # Aoo installation wrapper 
 # Script Developed by Apivat Pattana-Anurak
 # SysAdmin & Programmer
-# Version 1.0.0.2
+# Version 1.0.0.3
 
 
 ##### Step 1 Download #####
