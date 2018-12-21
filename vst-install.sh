@@ -1,7 +1,7 @@
 #!/bin/bash
 # Vesta installation wrapper
 # http://vestacp.com 
-# Develop by Apivat Pattana-Anurak
+# Develop by Apivat Pattana-Anurak (Aoo)
 # Versions 1.0.0.1 
 
 ###########################
@@ -19,14 +19,16 @@ yum install open-vm-tools -y
 yum -y update
 
 
-
+############################################
+#          Start Install VestaCP           #
+############################################
 # Currently Supported Operating Systems:
 #
 #   RHEL 5, 6, 7
 #   CentOS 5, 6, 7
 #   Debian 7, 8
 #   Ubuntu 12.04 - 18.04
-#
+#   All Linux
 
 # Am I root?
 if [ "x$(id -u)" != 'x0' ]; then
