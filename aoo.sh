@@ -1,7 +1,7 @@
 #!/bin/bash
-# Aoo installation wrapper 
+# Aoo Basic installation wrapper # Version 1.0.0.2
 # Script Developed by Apivat Pattana-Anurak
-# SysAdmin & Programmer
+# SysAdmin & Programmer # Thailand # Bangkok
 
 # install
 yum install screen -y
@@ -20,7 +20,7 @@ useradd -p paHW.7qDiHJCM aoo
 usermod -G wheel aoo
 mkdir -p /home/aoo/.ssh
 chmod 700 /home/aoo /home/aoo/.ssh
-curl -O /home/aoo/.ssh/authorized_keys https://raw.githubusercontent.com/aoopa/linux-centos/master/authorized_keys
+curl -o /home/aoo/.ssh/authorized_keys https://raw.githubusercontent.com/aoopa/linux-centos/master/authorized_keys
 chmod 600 /home/aoo/.ssh/authorized_keys
 chown aoo.aoo -R /home/aoo /home/aoo/.ssh
 
