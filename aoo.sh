@@ -35,3 +35,10 @@ sed -i 's/# %wheel\tALL=(ALL)\tNOPASSWD: ALL/%wheel\tALL=(ALL)\tNOPASSWD: ALL/' 
 
 # Create Perl encripted Password by Aoostudio : 
 # https://raw.githubusercontent.com/aoopa/linux-centos/master/Create%20Perl%20encripted%20Password%20by%20Aoo
+
+
+echo "************************************************"
+echo "*                                              *"
+echo "*           PLEASE REBOOT SERVER NOW           *"
+echo "*                                              *"
+echo "************************************************"
