@@ -1,7 +1,7 @@
 #!/bin/bash
 # Aoo Basic installation wrapper # Version 1.0.0.3
 # Script Developed by Apivat Pattana-Anurak
-# SysAdmin & Programmer # Thailand # Bangkok
+# SysAdmin & Programmer Form #Bangkok #Thailand 
 
 ################## Step1 basic install & update ####################
 # install
