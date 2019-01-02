@@ -33,7 +33,7 @@ sed -i 's/#MaxAuthTries 6/MaxAuthTries 3/' /etc/ssh/sshd_config
 echo 'AllowUsers aoo' >> /etc/ssh/sshd_config
 sed -i 's/# %wheel\tALL=(ALL)\tNOPASSWD: ALL/%wheel\tALL=(ALL)\tNOPASSWD: ALL/' /etc/sudoers
 
-# Create Perl encripted Password by Aoostudio : 
+# Create Perl encripted Password by Aoo : 
 # https://raw.githubusercontent.com/aoopa/linux-centos/master/Create%20Perl%20encripted%20Password%20by%20Aoo
 
 
