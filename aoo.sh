@@ -36,6 +36,10 @@ sed -i 's/# %wheel\tALL=(ALL)\tNOPASSWD: ALL/%wheel\tALL=(ALL)\tNOPASSWD: ALL/' 
 # Create Perl encripted Password by Aoo : 
 # https://raw.githubusercontent.com/aoopa/linux-centos/master/Create%20Perl%20encripted%20Password%20by%20Aoo
 
+## htop procress ##
+wget dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+rpm -ihv epel-release-7-11.noarch.rpm 
+yum install htop
 
 echo "************************************************"
 echo "*                                              *"
