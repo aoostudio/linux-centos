@@ -1,5 +1,5 @@
 #!/bin/bash
-# Aoo Basic installation wrapper # Version 1.0.0.3
+# Aoo Basic installation wrapper # Version 1.0.0.4
 # Script Developed by Apivat Pattana-Anurak
 # SysAdmin & Programmer Form #Bangkok #Thailand 
 
@@ -10,6 +10,7 @@ yum install perl -y
 yum install net-tools -y
 yum install wget -y
 yum install whois -y
+yum install npm -y
 
 # update os
 yum -y update
