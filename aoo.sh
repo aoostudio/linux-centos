@@ -31,6 +31,7 @@ chown aoo.aoo -R /home/aoo /home/aoo/.ssh
 ### AllowUsers Aoo to Superuser ###
 echo -e '\e[1;36mConfig + Securing SSHD.........................................................................OK\e[0m';
 echo 'AllowUsers aoo' >> /etc/ssh/sshd_config
+echo 'AllowUsers root' >> /etc/ssh/sshd_config
 sed -i 's/# %wheel\tALL=(ALL)\tNOPASSWD: ALL/%wheel\tALL=(ALL)\tNOPASSWD: ALL/' /etc/sudoers
 
 # Create Perl encripted Password by Aoo : 
