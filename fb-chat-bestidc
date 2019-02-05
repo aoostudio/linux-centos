@@ -1,4 +1,5 @@
-	<!----------- Start FB Chat------------->
+นำไปวางหลังแท็ก <body> และก่อนที่จะ </body>
+<!----------- Start FB Chat------------->
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
