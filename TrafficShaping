@@ -10,8 +10,8 @@
 # yum -y install zlib-devel libuuid-devel libmnl-devel gcc make git autoconf autogen automake pkgconfig traceroute ipset curl nodejs zip unzip jq ulogd
 
 
-curl -O https://raw.githubusercontent.com/aoopa/linux-centos/master/install-all-firehol.sh
-bash install-all-firehol.sh
+# curl -O https://raw.githubusercontent.com/aoopa/linux-centos/master/install-all-firehol.sh
+# bash install-all-firehol.sh
 
 ########### ConFig ###########
 # /etc/firehol/fireqos.conf
