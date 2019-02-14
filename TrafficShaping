@@ -1,0 +1,96 @@
+#!/bin/bash
+# Aoo  installation wrapper # Version 1.0.0.1
+# Script Developed by Apivat Pattana-Anurak
+
+# --------- Install ------------ #
+# Debian / Ubuntu
+# apt-get install zlib1g-dev uuid-dev libmnl-dev gcc make git autoconf autogen automake pkg-config traceroute ipset curl nodejs zip unzip jq ulogd2 autoconf-archive
+
+# Centos / Fedora / Redhat
+# yum install zlib-devel libuuid-devel libmnl-devel gcc make git autoconf autogen automake pkgconfig traceroute ipset curl nodejs zip unzip jq ulogd
+
+
+########### ConFig ###########
+# /etc/firehol/fireqos.conf
+
+
+########### Status ###########
+# fireqos start
+# fireqos status world-in
+# fireqos status world-out
+
+DEVICE=ens192
+INPUT_SPEED=12000kbit
+OUTPUT_SPEED=800kbit
+LINKTYPE="adsl local pppoe-llc"
+
+# ------------- COPY + PASTE BELOW THIS POINT ------------
+interface $DEVICE world-in input rate $INPUT_SPEED $LINKTYPE # removed balanced
+   class voip commit 120kbit              # committed traffic
+      match udp port 5060
+      match udp dports 10000:10100
+      match sports 3478,5349
+
+   class interactive commit 20%           # committed traffic
+      match udp port 53
+      match tcp port 22
+      match icmp
+      match tcp sports 5222,5228
+      match tcp sports 5223
+
+   class facetime commit 200kbit          # committed traffic
+      match udp ports 3478:3497,16384:16387,16393:16402
+
+   class vpns commit 20%                  # committed traffic
+      match tcp port 1723
+      match gre
+      match dport 1195:1198
+
+   class surfing commit 30%               # committed traffic
+      match tcp sports 0:1023
+
+   class synacks                          # 1% is the default
+      match tcp syn
+      match tcp ack
+
+   class default                          # 1% is the default
+
+   class torrents                         # 1% is the default
+      match sports 6881:6999
+      match dport 51414 prio 1
+      match sports 16384:65535 dports 16384:65535
+
+interface $DEVICE world-out output rate $OUTPUT_SPEED $LINKTYPE # removed balanced
+   class voip commit 120kbit              # committed traffic
+      match udp port 5060
+      match udp sports 10000:10100
+      match dports 3478,5349
+
+   class interactive commit 20%           # committed traffic
+      match udp port 53
+      match tcp port 22
+      match icmp
+      match tcp dports 5222,5228
+      match tcp dports 5223
+
+   class facetime commit 200kbit          # committed traffic
+      match udp ports 3478:3497,16384:16387,16393:16402
+
+   class vpns commit 20%                  # committed traffic
+      match tcp port 1723
+      match gre
+      match sport 1195:1198
+
+   class surfing commit 5%                # committed traffic
+      match tcp dports 0:1023
+
+   class synacks                          # 1% is the default
+      match tcp syn
+      match tcp ack
+
+   class default                          # 1% is the default
+
+   class torrents                         # 1% is the default
+      match dports 6881:6999
+      match sport 51414 prio 1
+      match sports 16384:65535 dports 16384:65535
