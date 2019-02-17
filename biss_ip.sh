@@ -1,8 +1,9 @@
 #!/bin/bash
-# Aoo validate_ip wrapper # Version 1.0.0.1
+# Aoo validate_ip wrapper # Version 1.0.0.2
 # Script Developed by Apivat Pattana-Anurak
 # Checks that the parameter passed is an IP Address.
 # Meant for user input validation.
+# Example : sh biss_ip.sh 27.254.164.1
 
 function validate_IP() {
         # Step 1 : Contain exactly three dots.
@@ -27,13 +28,13 @@ else
         done
 fi
 
-####  echo "Parameter '$1' is a valid IP Address."; //หากเงื่อนไขตรวจสอบไอพีถูกต้อง จะแสดงผลลัพ
+####  echo "Parameter '$1' is a valid IP Address."; //หากเงื่อนไขตรวจสอบไอพีถูกต้อง จะแสดงผล
 return 0;
 }
 
 validate_IP $1;
 
-############################## Step 5 : Chk IP Validation ################################
+############################## Step 5 : Chk IP Validation (Range)################################
 # Set DEBUG=1, in order to see it iterate through the calculations.
 #DEBUG=1
 
@@ -96,7 +97,7 @@ function in_subnet {
 for subnet in $MAXCDN_ARRAY
 do
     (( $(in_subnet $subnet $IP) )) &&
-        echo "${IP} is in ${subnet}" && break
+        echo "${IP} Is in Range ${subnet}" && break
 done
 
 ############################# End Script ###############################
