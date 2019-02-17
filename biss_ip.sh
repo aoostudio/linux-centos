@@ -1,5 +1,5 @@
 #!/bin/bash
-# Aoo validate_ip wrapper # Version 1.0.0.2
+# Aoo validate_ip wrapper # Version 1.0.0.3
 # Script Developed by Apivat Pattana-Anurak
 # Checks that the parameter passed is an IP Address.
 # Meant for user input validation.
@@ -97,7 +97,7 @@ function in_subnet {
 for subnet in $MAXCDN_ARRAY
 do
     (( $(in_subnet $subnet $IP) )) &&
-        echo "${IP} Is in Range ${subnet}" && break
+        echo "IP : ${IP} Is in Range : ${subnet}" && break
 done
 
 ############################# End Script ###############################
