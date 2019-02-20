@@ -35,6 +35,11 @@ sed -i 's/# %wheel\tALL=(ALL)\tNOPASSWD: ALL/%wheel\tALL=(ALL)\tNOPASSWD: ALL/' 
 
 rm -rf mod_evasive* csf* centos.sh xcache*
 
-echo "************************************************"
-echo "*           PLEASE REBOOT SERVER NOW           *"
-echo "************************************************"
+echo "************************************************************"
+echo "*                 PLEASE REBOOT SERVER NOW                 *"
+echo "*      Current date : $(date)         *"
+echo "*                 Hostname   @ $(hostname)                 *"
+echo "*                  Network configuration                   *"
+ip -o -f inet addr show | awk '/scope global/ {print $1, $2, $3, $4, $5, $6}'
+echo "************************************************************"
+
