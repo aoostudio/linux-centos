@@ -46,10 +46,11 @@ yum install atop -y
 yum install iftop -y
 yum install nmon -y
 
-
-#################### End Script #######################
-
-
-echo "************************************************"
-echo "*           PLEASE REBOOT SERVER NOW           *"
-echo "************************************************"
+######################## End Script #########################
+echo "************************************************************"
+echo "*                 PLEASE REBOOT SERVER NOW                 *"
+echo "*      Current date : $(date)         *"
+echo "*                 Hostname   @ $(hostname)                 *"
+echo "*                  Network configuration                   *"
+            ip -o -f inet addr show | awk '/scope global/ {print $1, $2, $3, $4, $5, $6}'
+echo "************************************************************"
