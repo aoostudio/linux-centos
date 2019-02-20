@@ -15,3 +15,5 @@ echo "Insert $Script to File $FILE_NAME"
 echo "I will Insert your Script in [$Script]"
 echo '#!/bin/sh' > ${FILE_NAME}
 echo "$Script" >> ${FILE_NAME}
+
+chmod 755 ${FILE_NAME}
