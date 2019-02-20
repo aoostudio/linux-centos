@@ -97,7 +97,7 @@ function in_subnet {
 for subnet in $MAXCDN_ARRAY
 do
     (( $(in_subnet $subnet $IP) )) &&
-        echo "IP : ${IP} Is in Range : ${subnet}" && break
+        echo "IP : ${IP} Is in Range : [${subnet}]" && break
 done
 
 ############################# End Script ###############################
