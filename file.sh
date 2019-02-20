@@ -1,4 +1,8 @@
 #!/bin/sh
+# Aoo Create File & Insert Script # Version 1.0.0.5
+# Script Developed by Apivat Pattana-Anurak
+# SysAdmin & Programmer Form #Bangkok #Thailand 
+
 echo "What is File Name?"
 read FILE_NAME
 echo "Create File $FILE_NAME Success."
